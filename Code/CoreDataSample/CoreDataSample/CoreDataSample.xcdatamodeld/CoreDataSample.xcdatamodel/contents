@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="School" representedClassName=".School" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="student" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="school" inverseEntity="Student" syncable="YES"/>
+        <relationship name="teacher" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Teacher" inverseName="school" inverseEntity="Teacher" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName=".Student" syncable="YES">
+        <attribute name="grade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="school" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="School" inverseName="student" inverseEntity="School" syncable="YES"/>
+    </entity>
+    <entity name="Teacher" representedClassName=".Teacher" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subjects" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="school" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="School" inverseName="teacher" inverseEntity="School" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Student" positionX="-513" positionY="57" width="128" height="118"/>
+        <element name="School" positionX="-243" positionY="-315" width="128" height="103"/>
+        <element name="Teacher" positionX="-54" positionY="72" width="128" height="103"/>
+    </elements>
+</model>

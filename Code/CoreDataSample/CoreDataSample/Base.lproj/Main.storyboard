@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcH-0X-dwS">
+                                <rect key="frame" x="42" y="60" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="lSF-VO-tiy"/>
+                                </constraints>
+                                <state key="normal" title="Add School"/>
+                                <connections>
+                                    <action selector="createSchool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTh-yZ-VmI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cy-B2-MaO">
+                                <rect key="frame" x="143" y="60" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="LBJ-Kh-C3b"/>
+                                </constraints>
+                                <state key="normal" title="Add Student"/>
+                                <connections>
+                                    <action selector="createStudent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u3F-X2-cuX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jm-jg-nSP">
+                                <rect key="frame" x="243" y="60" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="oNT-ZO-Ir8"/>
+                                </constraints>
+                                <state key="normal" title="Add Teacher"/>
+                                <connections>
+                                    <action selector="createTeacher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="17G-Ee-i77"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bj-G4-3cz">
+                                <rect key="frame" x="162" y="214" width="51" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="YBo-X6-C2b"/>
+                                </constraints>
+                                <state key="normal" title="Results"/>
+                                <connections>
+                                    <action selector="showResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vho-kO-bKM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Di-Ws-KUM">
+                                <rect key="frame" x="110" y="130" width="156" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="oDl-YC-HbV"/>
+                                </constraints>
+                                <state key="normal" title="Delete Student Record"/>
+                                <connections>
+                                    <action selector="deleteStudentRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSI-Fw-eZ9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WcH-0X-dwS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="0f8-fU-JH3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Jm-jg-nSP" secondAttribute="trailing" constant="16" id="5yY-0f-eVJ"/>
+                            <constraint firstItem="9cy-B2-MaO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="F3v-ta-Wjq"/>
+                            <constraint firstItem="1Jm-jg-nSP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="G5B-9o-oDe"/>
+                            <constraint firstItem="9cy-B2-MaO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QTf-pb-wpU"/>
+                            <constraint firstItem="4Di-Ws-KUM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zud-Ev-sf7"/>
+                            <constraint firstItem="4Di-Ws-KUM" firstAttribute="top" secondItem="9cy-B2-MaO" secondAttribute="bottom" constant="40" id="dU1-Uh-NdR"/>
+                            <constraint firstItem="5Bj-G4-3cz" firstAttribute="top" secondItem="9cy-B2-MaO" secondAttribute="bottom" constant="124" id="ibH-hJ-JU4"/>
+                            <constraint firstItem="WcH-0X-dwS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="r2m-uv-H6F"/>
+                            <constraint firstItem="5Bj-G4-3cz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xTl-3h-TUL"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
